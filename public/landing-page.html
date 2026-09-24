@@ -1,0 +1,1733 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1990 coffeenery — Savor the Perfect Brew!</title>
+  <meta name="description" content="Artisanal roasting, specialty lattes, and slow cold brew since 1990. Experience coffee craftsmanship at 1990 coffeenery." />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons for clean standalone SVG icons without external node modules -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            coffee: {
+              cream: '#FAF7F2',
+              beige: '#F5EFE6',
+              sand: '#EADBC8',
+              caramel: '#C68B59',
+              amber: '#D49B6A',
+              roast: '#7C4F32',
+              dark: '#2C1810',
+              espresso: '#1B0F0A',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F5EFE6;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #C68B59;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #7C4F32;
+    }
+
+    /* Background Sunlight & Turntable Animations */
+    @keyframes sunbeamSweep {
+      0%, 100% {
+        transform: rotate(-18deg) translateX(-10%) translateY(0);
+        opacity: 0.35;
+      }
+      50% {
+        transform: rotate(-22deg) translateX(5%) translateY(-5%);
+        opacity: 0.55;
+      }
+    }
+
+    @keyframes slowOrbit {
+      0%, 100% {
+        transform: scale(1.03) rotate(0deg);
+      }
+      50% {
+        transform: scale(1.08) rotate(1.5deg);
+      }
+    }
+
+    .animate-sunbeam {
+      animation: sunbeamSweep 14s ease-in-out infinite;
+    }
+
+    .animate-orbit {
+      animation: slowOrbit 18s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-[#F8F4EE] text-[#2C1810] font-sans antialiased selection:bg-[#C68B59] selection:text-white">
+
+  <!-- 3. NAVBAR -->
+  <header id="main-navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-gradient-to-b from-[#1B0F0A]/90 via-[#1B0F0A]/50 to-transparent text-white py-3">
+    <!-- Top Micro Bar -->
+    <div class="hidden lg:flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-2 text-xs text-[#EADBC8]/85 border-b border-[#FAF7F2]/10 mb-2">
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-1.5">
+          <i class="fa-regular fa-clock text-[#C68B59]"></i> Buka Setiap Hari: 08.00 – 21.00 WIB
+        </span>
+        <span class="flex items-center gap-1.5">
+          <i class="fa-solid fa-location-dot text-[#C68B59]"></i> Jl. K.H. Hasyim Ashari No.65, Cianjur
+        </span>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/6281999571990?text=Halo%201990%20coffeenery,%20saya%20ingin%20memesan" target="_blank" rel="noopener noreferrer" class="bg-[#25D366]/20 hover:bg-[#25D366] text-[#FAF7F2] px-2.5 py-0.5 rounded-full text-[11px] font-medium border border-[#25D366]/40 transition-colors flex items-center gap-1">
+          <i class="fa-brands fa-whatsapp text-[#25D366]"></i>
+          <span>WA: +62 819-9957-1990</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        
+        <!-- Brand Logo -->
+        <a href="#home" id="brand-logo" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-full bg-[#C68B59] text-[#1B0F0A] flex items-center justify-center shadow-md transition-transform group-hover:scale-105">
+            <i class="fa-solid fa-mug-hot text-base"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-[#FAF7F2]">
+              1990 <span class="italic font-normal">coffeenery</span>
+            </span>
+            <span class="text-[9px] uppercase tracking-[0.25em] font-semibold text-[#EADBC8] -mt-1">
+              Artisanal Roastery
+            </span>
+          </div>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav id="desktop-nav" class="hidden md:flex items-center gap-7">
+          <a href="#home" class="text-sm font-medium tracking-wide text-[#FAF7F2]/90 hover:text-[#C68B59] transition-colors">Home</a>
+          <a href="#menu" class="text-sm font-medium tracking-wide text-[#FAF7F2]/90 hover:text-[#C68B59] transition-colors">Buku Menu</a>
+          <a href="#facilities" class="text-sm font-medium tracking-wide text-[#FAF7F2]/90 hover:text-[#C68B59] transition-colors">Fasilitas</a>
+          <a href="#gallery" class="text-sm font-medium tracking-wide text-[#FAF7F2]/90 hover:text-[#C68B59] transition-colors">Galeri</a>
+          <a href="#location" class="text-sm font-medium tracking-wide text-[#FAF7F2]/90 hover:text-[#C68B59] transition-colors">Lokasi & Kontak</a>
+        </nav>
+
+        <!-- Right Side: Search, Cart Icon & CTA -->
+        <div class="flex items-center gap-3 sm:gap-4">
+          <button id="search-btn" onclick="toggleSearch()" aria-label="Search" class="p-2 text-white hover:bg-white/10 rounded-full transition-colors">
+            <i class="fa-solid fa-magnifying-glass text-lg"></i>
+          </button>
+          
+          <button id="cart-btn" onclick="toggleCart()" aria-label="Cart" class="p-2 text-white hover:bg-white/10 rounded-full transition-colors relative">
+            <i class="fa-solid fa-bag-shopping text-lg"></i>
+            <span id="cart-badge" class="absolute -top-1 -right-1 bg-[#C68B59] text-white text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow">0</span>
+          </button>
+
+          <a href="#menu" class="hidden sm:inline-flex items-center px-4 py-2 text-sm font-semibold tracking-wide rounded-full bg-[#C68B59] hover:bg-[#b87333] text-white shadow transition-all duration-200">
+            Pesan Menu
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button id="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu" class="md:hidden p-2 text-white hover:bg-white/10 rounded-lg">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-nav" class="hidden md:hidden bg-[#FAF7F2] text-[#2C1810] border-b border-[#EADBC8] px-6 py-5 mt-3 shadow-xl">
+      <div class="flex flex-col gap-3">
+        <a href="#home" onclick="toggleMobileMenu()" class="text-base font-medium py-1.5 border-b border-[#EADBC8]/40 hover:text-[#C68B59]">Home</a>
+        <a href="#menu" onclick="toggleMobileMenu()" class="text-base font-medium py-1.5 border-b border-[#EADBC8]/40 hover:text-[#C68B59]">Buku Menu</a>
+        <a href="#facilities" onclick="toggleMobileMenu()" class="text-base font-medium py-1.5 border-b border-[#EADBC8]/40 hover:text-[#C68B59]">Fasilitas</a>
+        <a href="#gallery" onclick="toggleMobileMenu()" class="text-base font-medium py-1.5 border-b border-[#EADBC8]/40 hover:text-[#C68B59]">Galeri</a>
+        <a href="#location" onclick="toggleMobileMenu()" class="text-base font-medium py-1.5 border-b border-[#EADBC8]/40 hover:text-[#C68B59]">Lokasi & Kontak</a>
+        <div class="pt-2 flex flex-col gap-2">
+          <a href="https://wa.me/6281999571990?text=Halo%201990%20coffeenery,%20saya%20ingin%20memesan" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-full bg-[#25D366] text-white font-medium text-sm flex items-center justify-center gap-2 shadow">
+            <i class="fa-brands fa-whatsapp text-base"></i>
+            <span>Pesan via WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. HERO SECTION WITH BACKGROUND VIDEO -->
+  <section id="home" class="relative min-h-[92vh] lg:min-h-screen flex items-center justify-center overflow-hidden bg-[#1B0F0A]">
+    <!-- Top Floating Controls: 360° Turntable Badge & Focus Mode Toggle -->
+    <div class="absolute top-24 sm:top-28 right-4 sm:right-8 z-20 flex items-center gap-2 sm:gap-3">
+      <!-- 360 Indicator -->
+      <div class="hidden sm:flex items-center gap-2 bg-[#1B0F0A]/75 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-[#FAF7F2]/20 text-xs text-[#EADBC8] shadow-xl">
+        <i class="fa-solid fa-arrows-rotate text-[#C68B59] animate-spin" style="animation-duration: 8s; animation-timing-function: linear;"></i>
+        <span class="text-[11px] font-medium tracking-wide">360° Rotating Iced Coffee</span>
+      </div>
+
+      <!-- Focus Mode Toggle Button -->
+      <button onclick="toggleFocusMode()" id="focus-mode-btn" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#1B0F0A]/80 hover:bg-[#1B0F0A] border border-[#EADBC8]/30 hover:border-[#D49B6A] text-[#EADBC8] hover:text-[#FAF7F2] text-xs backdrop-blur-md transition-all duration-300 shadow-xl cursor-pointer" title="Mode Fokus Kopi (Sembunyikan Teks)">
+        <i id="focus-mode-icon" class="fa-regular fa-eye-slash text-[#C68B59]"></i>
+        <span id="focus-mode-text" class="text-[11px] font-medium">Mode Fokus</span>
+      </button>
+    </div>
+
+    <!-- Background Video Element -->
+    <div class="absolute inset-0 z-0 overflow-hidden">
+      <video id="hero-video" autoplay loop muted playsinline preload="auto" class="w-full h-full object-cover opacity-95 filter brightness-100 contrast-105 transition-all duration-700 transform-gpu" poster="/assets/iced_coffee_rotating.jpg">
+        <source src="/Iced_coffee_rotates_on_block_20260921121127.mp4" type="video/mp4" />
+        <source src="Iced_coffee_rotates_on_block_20260921121127.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/aoqpm2sj/video/upload/v1790037971/Iced_coffee_rotates_on_block_20260921121127.mp4" type="video/mp4" />
+        Your browser does not support video playback.
+      </video>
+      <!-- Moving Diagonal Sunlight Shadow Beam (Matches Video Aesthetics) -->
+      <div class="absolute inset-0 pointer-events-none animate-sunbeam opacity-30 mix-blend-soft-light" style="background: linear-gradient(115deg, rgba(234, 219, 200, 0.6) 0%, rgba(198, 139, 89, 0.25) 25%, transparent 55%, rgba(27, 15, 10, 0.6) 100%)"></div>
+      
+      <!-- Asymmetric Gradient: Dark on left for pristine text contrast, wide-open on center & right for coffee -->
+      <div class="absolute inset-0 bg-gradient-to-r from-[#1B0F0A]/85 via-[#1B0F0A]/40 to-transparent pointer-events-none hidden lg:block"></div>
+      
+      <!-- Mobile Balanced Vignette -->
+      <div class="absolute inset-0 bg-gradient-to-t from-[#1B0F0A]/85 via-[#1B0F0A]/20 to-[#1B0F0A]/50 pointer-events-none lg:hidden"></div>
+      
+      <!-- Bottom edge smooth blend -->
+      <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#1B0F0A] to-transparent pointer-events-none"></div>
+
+      <!-- Ambient Light Glow -->
+      <div class="absolute top-0 right-1/4 w-96 h-96 rounded-full bg-[#D49B6A]/15 blur-3xl pointer-events-none animate-warm-pulse"></div>
+    </div>
+
+    <!-- Floating Center-Right Hotspot: Highlighting the 360° Cold Brew Detail -->
+    <div id="coffee-hotspot" class="hidden lg:flex absolute bottom-28 right-1/3 translate-x-20 z-10 items-center gap-2.5 bg-[#1B0F0A]/65 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-[#EADBC8]/25 text-[#FAF7F2] text-xs shadow-xl transition-all duration-500">
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D49B6A] opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-[#C68B59]"></span>
+      </span>
+      <span class="font-serif text-[#EADBC8] text-[11px] tracking-wide">360° Cold Foam & Espresso Swirl</span>
+    </div>
+
+    <!-- Hero Content Container: Tidy, Uncluttered Left-Aligned Editorial Hierarchy -->
+    <div id="hero-content-box" class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 sm:py-32 lg:py-36 min-h-[85vh] flex flex-col justify-center transition-all duration-500">
+      <div class="max-w-xl text-left">
+        
+        <!-- Vintage Badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FAF7F2]/10 backdrop-blur-md border border-[#EADBC8]/25 text-[#EADBC8] text-xs font-medium tracking-widest uppercase mb-4 shadow-sm">
+          <i class="fa-solid fa-seedling text-[#C68B59]"></i>
+          <span>EST. 1990 · Micro-Lot Roastery</span>
+        </div>
+
+        <!-- Overlay Title: 1990 coffeenery -->
+        <h2 id="hero-title" class="text-[#EADBC8] font-serif text-base sm:text-xl md:text-2xl tracking-[0.25em] uppercase font-light mb-2">
+          1990 coffeenery
+        </h2>
+
+        <!-- Stylish Retro-Modern Headline: Savor the Perfect Brew! -->
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-[#FAF7F2] font-normal tracking-tight leading-[1.08] mb-4 drop-shadow-md">
+          Savor the <br class="hidden sm:inline" />
+          <span class="italic font-serif font-bold text-[#D49B6A]">Perfect Brew!</span>
+        </h1>
+
+        <!-- Subtitle Description -->
+        <p class="text-sm sm:text-base text-[#EADBC8]/90 font-light leading-relaxed mb-8 max-w-lg tracking-wide">
+          Slow-roasted in micro-lots, poured with deliberate poise over crystal-clear ice. Discover thirty years of artisanal coffee craftsmanship in every sip.
+        </p>
+
+        <!-- Two Call-to-Action Buttons -->
+        <div class="flex flex-wrap items-center gap-3 sm:gap-4 mb-10">
+          <button onclick="openOrderModal()" class="px-7 py-3 rounded-full bg-[#C68B59] hover:bg-[#b87333] text-white font-medium text-sm sm:text-base tracking-wide shadow-lg shadow-[#C68B59]/25 hover:shadow-xl hover:shadow-[#C68B59]/40 transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+            <span>Order Now</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </button>
+
+          <a href="#menu" class="px-7 py-3 rounded-full bg-[#FAF7F2]/10 hover:bg-[#FAF7F2]/20 text-[#FAF7F2] border border-[#EADBC8]/40 hover:border-[#FAF7F2] font-medium text-sm sm:text-base tracking-wide backdrop-blur-sm transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+            <span>Explore Menu</span>
+          </a>
+        </div>
+
+        <!-- Sleek Horizontal Coffee Metrics Bar (Out of the way of the iced coffee animation) -->
+        <div class="pt-6 border-t border-[#FAF7F2]/15 flex flex-wrap items-center gap-5 sm:gap-7 text-xs text-[#EADBC8]/80">
+          <div class="flex items-center gap-2">
+            <span class="text-base sm:text-lg font-serif text-[#FAF7F2] font-bold">100%</span>
+            <span class="text-[11px] uppercase tracking-wider text-[#EADBC8]/70">Arabica Beans</span>
+          </div>
+          <div class="w-1 h-1 rounded-full bg-[#C68B59]"></div>
+          <div class="flex items-center gap-2">
+            <span class="text-base sm:text-lg font-serif text-[#FAF7F2] font-bold">18 Hours</span>
+            <span class="text-[11px] uppercase tracking-wider text-[#EADBC8]/70">Cold Drip</span>
+          </div>
+          <div class="w-1 h-1 rounded-full bg-[#C68B59]"></div>
+          <div class="flex items-center gap-2">
+            <span class="text-base sm:text-lg font-serif text-[#FAF7F2] font-bold">34 Years</span>
+            <span class="text-[11px] uppercase tracking-wider text-[#EADBC8]/70">Craft</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Video Play/Pause & Sound Controls -->
+    <div class="absolute bottom-6 right-6 z-20 flex items-center gap-2 bg-[#1B0F0A]/75 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-[#FAF7F2]/20 text-xs text-[#EADBC8] shadow-lg">
+      <button onclick="toggleVideoPlayback()" aria-label="Toggle Video Playback" class="p-1 hover:text-white cursor-pointer" title="Play / Pause">
+        <i id="play-pause-icon" class="fa-solid fa-pause"></i>
+      </button>
+      <div class="w-px h-3 bg-[#FAF7F2]/25"></div>
+      <button onclick="toggleVideoMute()" aria-label="Toggle Audio" class="p-1 hover:text-white cursor-pointer" title="Mute / Unmute">
+        <i id="mute-icon" class="fa-solid fa-volume-xmark"></i>
+      </button>
+      <div class="w-px h-3 bg-[#FAF7F2]/25"></div>
+      <button id="speed-btn" onclick="togglePlaybackSpeed()" aria-label="Toggle Speed" class="px-1.5 py-0.5 rounded bg-white/10 hover:bg-white/20 text-[#FAF7F2] font-semibold text-[10px] cursor-pointer" title="Kecepatan Rotasi 360°">
+        1x
+      </button>
+    </div>
+  </section>
+
+  <!-- 4. FEATURES / BUKU MENU SECTION -->
+  <section id="menu" class="py-20 sm:py-28 bg-[#FAF7F2] relative scroll-mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#EADBC8]/60 text-[#7C4F32] text-xs font-semibold uppercase tracking-wider mb-3 border border-[#C68B59]/20">
+          <i class="fa-solid fa-mug-saucer text-[#C68B59]"></i>
+          <span>Buku Menu &amp; Estimasi Harga</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-[#2C1810] font-normal tracking-tight">
+          Buku Menu <span class="italic font-bold text-[#C68B59]">Highlights</span>
+        </h2>
+        <div class="w-16 h-0.5 bg-[#C68B59] mx-auto my-4 rounded-full"></div>
+        <p class="text-base text-[#7C4F32]/80 leading-relaxed font-light">
+          Setiap racikan diseduh dengan biji kopi pilihan terbaik dan bahan berkualitas prima oleh barista berpengalaman di 1990 Coffeenery Cianjur.
+        </p>
+      </div>
+
+      <!-- Menu Category Tabs -->
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12">
+        <button onclick="filterMenuCategory('all')" id="tab-all" class="menu-tab-btn active px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 bg-[#2C1810] text-[#FAF7F2] shadow-sm">
+          Semua Menu (13)
+        </button>
+        <button onclick="filterMenuCategory('coffee')" id="tab-coffee" class="menu-tab-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 bg-white text-[#7C4F32] border border-[#EADBC8] hover:border-[#C68B59]">
+          Kopi Khas (5)
+        </button>
+        <button onclick="filterMenuCategory('non-coffee')" id="tab-non-coffee" class="menu-tab-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 bg-white text-[#7C4F32] border border-[#EADBC8] hover:border-[#C68B59]">
+          Non-Kopi (3)
+        </button>
+        <button onclick="filterMenuCategory('pastry')" id="tab-pastry" class="menu-tab-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 bg-white text-[#7C4F32] border border-[#EADBC8] hover:border-[#C68B59]">
+          Pastry &amp; Snack (3)
+        </button>
+        <button onclick="filterMenuCategory('main')" id="tab-main" class="menu-tab-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 bg-white text-[#7C4F32] border border-[#EADBC8] hover:border-[#C68B59]">
+          Makanan Berat (2)
+        </button>
+      </div>
+
+      <!-- Menu Grid -->
+      <div id="buku-menu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        
+        <!-- 1. Signature Iced Coffee 1990 -->
+        <div class="menu-item-card group relative bg-[#FDFBF7] rounded-2xl p-5 border border-[#EADBC8]/80 hover:border-[#C68B59] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col" data-category="coffee">
+          <span class="absolute top-4 right-4 bg-[#C68B59] text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-sm">
+            Best Seller
+          </span>
+          <div class="relative mb-4 flex justify-center">
+            <div class="w-32 h-32 rounded-full p-1 bg-gradient-to-tr from-[#C68B59] via-[#EADBC8] to-[#2C1810] shadow-md group-hover:scale-105 transition-transform duration-300">
+              <div class="w-full h-full rounded-full overflow-hidden border-2 border-[#FAF7F2] bg-[#2C1810]">
+                <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=600&q=80" alt="Signature Iced Coffee 1990" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              </div>
+            </div>
+          </div>
+          <div class="text-[11px] font-semibold uppercase tracking-wider text-[#C68B59] mb-1">Kopi Khas</div>
+          <h3 class="font-serif text-lg text-[#2C1810] font-semibold mb-1 group-hover:text-[#C68B59] transition-colors">Signature Iced Coffee 1990</h3>
+          <div class="text-base font-bold text-[#7C4F32] mb-2">Rp 28.000</div>
+          <p class="text-xs text-[#7C4F32]/80 leading-relaxed mb-4 font-light">
+            Kopi susu gula aren racikan istimewa 1990 dengan creamy gurih dan aroma espresso pekat seimbang.
+          </p>
+          <div class="mt-auto pt-3 border-t border-[#EADBC8]/50 flex items-center gap-2">
+            <button onclick="addToCart('Signature Iced Coffee 1990', 28000)" class="flex-1 py-2 px-3 rounded-xl text-xs font-medium bg-[#2C1810] text-[#FAF7F2] hover:bg-[#C68B59] transition-all flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-plus text-[10px]"></i> Pesan
+            </button>
+            <a href="https://wa.me/6281999571990?text=Halo%201990%20coffeenery,%20saya%20mau%20pesan%20Signature%20Iced%20Coffee%201990" target="_blank" rel="noopener noreferrer" aria-label="Order via WhatsApp" class="p-2 rounded-xl border border-[#25D366]/50 bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-colors" title="Pesan langsung lewat WhatsApp">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Cafe Latte / Iced Latte -->
+        <div class="menu-item-card group relative bg-[#FDFBF7] rounded-2xl p-5 border border-[#EADBC8]/80 hover:border-[#C68B59] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col" data-category="coffee">
+          <div class="relative mb-4 flex justify-center">
+            <div class="w-32 h-32 rounded-full p-1 bg-gradient-to-tr from-[#C68B59] via-[#EADBC8] to-[#2C1810] shadow-md group-hover:scale-105 transition-transform duration-300">
+              <div class="w-full h-full rounded-full overflow-hidden border-2 border-[#FAF7F2] bg-[#2C1810]">
+                <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=600&q=80" alt="Cafe Latte / Iced Latte" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              </div>
+            </div>
+          </div>
+          <div class="text-[11px] font-semibold uppercase tracking-wider text-[#C68B59] mb-1">Kopi Khas</div>
+          <h3 class="font-serif text-lg text-[#2C1810] font-semibold mb-1 group-hover:text-[#C68B59] transition-colors">Cafe Latte / Iced Latte</h3>
+          <div class="text-base font-bold text-[#7C4F32] mb-2">Rp 26.000</div>
+          <p class="text-xs text-[#7C4F32]/80 leading-relaxed mb-4 font-light">
+            Paduan espresso arabica halus dengan susu segar silky steamed milk micro-foam. Tersedia panas atau dingin.
+          </p>
+          <div class="mt-auto pt-3 border-t border-[#EADBC8]/50 flex items-center gap-2">
+            <button onclick="addToCart('Cafe Latte / Iced Latte', 26000)" class="flex-1 py-2 px-3 rounded-xl text-xs font-medium bg-[#2C1810] text-[#FAF7F2] hover:bg-[#C68B59] transition-all flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-plus text-[10px]"></i> Pesan
+            </button>
+            <a href="https://wa.me/6281999571990?text=Halo%201990%20coffeenery,%20saya%20mau%20pesan%20Cafe%20Latte%20/%20Iced%20Latte" target="_blank" rel="noopener noreferrer" aria-label="Order via WhatsApp" class="p-2 rounded-xl border border-[#25D366]/50 bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-colors">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Americano / Espresso -->
+        <div class="menu-item-card group relative bg-[#FDFBF7] rounded-2xl p-5 border border-[#EADBC8]/80 hover:border-[#C68B59] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col" data-category="coffee">
+          <div class="relative mb-4 flex justify-center">
+            <div class="w-32 h-32 rounded-full p-1 bg-gradient-to-tr from-[#C68B59] via-[#EADBC8] to-[#2C1810] shadow-md group-hover:scale-105 transition-transform duration-300">
+              <div class="w-full h-full rounded-full overflow-hidden border-2 border-[#FAF7F2] bg-[#2C1810]">
+                <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=600&q=80" alt="Americano / Espresso" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              </div>
+            </div>
+          </div>
+          <div class="text-[11px] font-semibold uppercase tracking-wider text-[#C68B59] mb-1">Kopi Khas</div>
+          <h3 class="font-serif text-lg text-[#2C1810] font-semibold mb-1 group-hover:text-[#C68B59] transition-colors">Americano / Espresso</h3>
+          <div class="text-base font-bold text-[#7C4F32] mb-2">Rp 20.000</div>
+          <p class="text-xs text-[#7C4F32]/80 leading-relaxed mb-4 font-light">
+            Ekstraksi double shot espresso dengan crema tebal keemasan, kaya rasa dark cocoa dan nutty.
+          </p>
+          <div class="mt-auto pt-3 border-t border-[#EADBC8]/50 flex items-center gap-2">
+            <button onclick="addToCart('Americano / Espresso', 20000)" class="flex-1 py-2 px-3 rounded-xl text-xs font-medium bg-[#2C1810] text-[#FAF7F2] hover:bg-[#C68B59] transition-all flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-plus text-[10px]"></i> Pesan
+            </button>
+            <a href="https://wa.me/6281999571990?text=Halo%201990%20coffeenery,%20saya%20mau%20pesan%20Americano%20/%20Espresso" target="_blank" rel="noopener noreferrer" aria-label="Order via WhatsApp" class="p-2 rounded-xl border border-[#25D366]/50 bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-colors">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. Caramel Macchiato -->
+        <div class="menu-item-card group relative bg-[#FDFBF7] rounded-2xl p-5 border border-[#EADBC8]/80 hover:border-[#C68B59] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col" data-category="coffee">
+          <div class="relative mb-4 flex justify-center">
+            <div class="w-32 h-32 rounded-full p-1 bg-gradient-to-tr from-[#C68B59] via-[#EADBC8] to-[#2C1810] shadow-md group-hover:scale-105 transition-transform duration-300">
+              <div class="w-full h-full rounded-full overflow-hidden border-2 border-[#FAF7F2] bg-[#2C1810]">
+                <img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=600&q=80" alt="Caramel Macchiato" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              </div>
+            </div>
+          </div>
+          <div class="text-[11px] font-semibold uppercase tracking-wider text-[#C68B59] mb-1">Kopi Khas</div>
+          <h3 class="font-serif text-lg text-[#2C1810] font-semibold mb-1 group-hover:text-[#C68B59] transition-colors">Caramel Macchiato</h3>
+          <div class="text-base font-bold text-[#7C4F32] mb-2">Rp 30.000</div>
+          <p class="text-xs text-[#7C4F32]/80 leading-relaxed mb-4 font-light">
+            Lapisan vanilla bean, fresh milk, tuangan espresso kental, dan sirup karamel bakar artisanal homemade.
+          </p>
+          <div class="mt-auto pt-3 border-t border-[#EADBC8]/50 flex items-center gap-2">
+            <button onclick="addToCart('Caramel Macchiato', 30000)" class="flex-1 py-2 px-3 rounded-xl text-xs font-medium bg-[#2C1810] text-[#FAF7F2] hover:bg-[#C68B59] transition-all flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-plus text-[10px]"></i> Pesan
+            </button>
+            <a href="https://wa.me/6281999571990?text=Halo%201990%20coffeenery,%20saya%20mau%20pesan%20Caramel%20Macchiato" target="_blank" rel="noopener noreferrer" aria-label="Order via WhatsApp" class="p-2 rounded-xl border border-[#25D366]/50 bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-colors">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. Manual Brew / Filter Coffee -->
+        <div class="menu-item-card group relative bg-[#FDFBF7] rounded-2xl p-5 border border-[#EADBC8]/80 hover:border-[#C68B59] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col" data-category="coffee">
+          <div class="relative mb-4 flex justify-center">
+            <div class="w-32 h-32 rounded-full p-1 bg-gradient-to-tr from-[#C68B59] via-[#EADBC8] to-[#2C1810] shadow-md group-hover:scale-105 transition-transform duration-300">
+              <div class="w-full h-full rounded-full overflow-hidden border-2 border-[#FAF7F2] bg-[#2C1810]">
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="Manual Brew / Filter Coffee" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              </div>
+            </div>
+          </div>
+          <div class="text-[11px] font-semibold uppercase tracking-wider text-[#C68B59] mb-1">Kopi Khas</div>
+          <h3 class="font-serif text-lg text-[#2C1810] font-semibold mb-1 group-hover:text-[#C68B59] transition-colors">Manual Brew / Filter Coffee</h3>
+          <div class="text-base font-bold text-[#7C4F32] mb-2">Rp 25.000</div>
+          <p class="text-xs text-[#7C4F32]/80 leading-relaxed mb-4 font-light">
+            Metode V60 pour over dengan pilihan biji single-origin lokal &amp; nusantara yang menonjolkan floral dan fruity notes.
+          </p>
+          <div class="mt-auto pt-3 border-t border-[#EADBC8]/50 flex items-center gap-2">
+            <button onclick="addToCart('Manual Brew / Filter Coffee', 25000)" class="flex-1 py-2 px-3 rounded-xl text-xs font-medium bg-[#2C1810] text-[#FAF7F2] hover:bg-[#C68B59] transition-all flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-plus text-[10px]"></i> Pesan
+            </button>
+            <a href="https://wa.me/6281999571990?text=Halo%201990%20coffeenery,%20saya%20mau%20pesan%20Manual%20Brew" target="_blank" rel="noopener noreferrer" aria-label="Order via WhatsApp" class="p-2 rounded-xl border border-[#25D366]/50 bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-colors">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 6. Matcha Latte -->
+        <div class="menu-item-card group relative bg-[#FDFBF7] rounded-2xl p-5 border border-[#EADBC8]/80 hover:border-[#C68B59] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col" data-category="non-coffee">
+          <div class="relative mb-4 flex justify-center">
+            <div class="w-32 h-32 rounded-full p-1 bg-gradient-to-tr from-[#C68B59] via-[#EADBC8] to-[#2C1810] shadow-md group-hover:scale-105 transition-transform duration-300">
+              <div class="w-full h-full rounded-full overflow-hidden border-2 border-[#FAF7F2] bg-[#2C1810]">
+                <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=600&q=80" alt="Matcha Latte" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              </div>
+            </div>
+          </div>
+          <div class="text-[11px] font-semibold uppercase tracking-wider text-[#C68B59] mb-1">Non-Kopi</div>
+          <h3 class="font-serif text-lg text-[#2C1810] font-semibold mb-1 group-hover:text-[#C68B59] transition-colors">Matcha Latte</h3>
+          <div class="text-base font-bold text-[#7C4F32] mb-2">Rp 28.000</div>
+          <p class="text-xs text-[#7C4F32]/80 leading-relaxed mb-4 font-light">
+            Bubuk green tea Uji Matcha impor berpadu lembut dengan susu segar creamy, kaya antioksidan dan wangi alami.
+          </p>
+          <div class="mt-auto pt-3 border-t border-[#EADBC8]/50 flex items-center gap-2">
+            <button onclick="addToCart('Matcha Latte', 28000)" class="flex-1 py-2 px-3 rounded-xl text-xs font-medium bg-[#2C1810] text-[#FAF7F2] hover:bg-[#C68B59] transition-all flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-plus text-[10px]"></i> Pesan
+            </button>
+            <a href="https://wa.me/6281999571990?text=Halo%201990%20coffeenery,%20saya%20mau%20pesan%20Matcha%20Latte" target="_blank" rel="noopener noreferrer" aria-label="Order via WhatsApp" class="p-2 rounded-xl border border-[#25D366]/50 bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-colors">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 7. Chocolate Signature -->
+        <div class="menu-item-card group relative bg-[#FDFBF7] rounded-2xl p-5 border border-[#EADBC8]/80 hover:border-[#C68B59] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col" data-category="non-coffee">
+          <div class="relative mb-4 flex justify-center">
+            <div class="w-32 h-32 rounded-full p-1 bg-gradient-to-tr from-[#C68B59] via-[#EADBC8] to-[#2C1810] shadow-md group-hover:scale-105 transition-transform duration-300">
+              <div class="w-full h-full rounded-full overflow-hidden border-2 border-[#FAF7F2] bg-[#2C1810]">
+                <img src="https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&w=600&q=80" alt="Chocolate Signature" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              </div>
+            </div>
+          </div>
+          <div class="text-[11px] font-semibold uppercase tracking-wider text-[#C68B59] mb-1">Non-Kopi</div>
+          <h3 class="font-serif text-lg text-[#2C1810] font-semibold mb-1 group-hover:text-[#C68B59] transition-colors">Chocolate Signature</h3>
+          <div class="text-base font-bold text-[#7C4F32] mb-2">Rp 26.000</div>
+          <p class="text-xs text-[#7C4F32]/80 leading-relaxed mb-4 font-light">
+            Cokelat pekat berkualitas tinggi dengan tekstur velvety, sentuhan dark cocoa manis pas dan menenangkan.
+          </p>
+          <div class="mt-auto pt-3 border-t border-[#EADBC8]/50 flex items-center gap-2">
+            <button onclick="addToCart('Chocolate Signature', 26000)" class="flex-1 py-2 px-3 rounded-xl text-xs font-medium bg-[#2C1810] text-[#FAF7F2] hover:bg-[#C68B59] transition-all flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-plus text-[10px]"></i> Pesan
+            </button>
+            <a href="https://wa.me/6281999571990?text=Halo%201990%20coffeenery,%20saya%20mau%20pesan%20Chocolate%20Signature" target="_blank" rel="noopener noreferrer" aria-label="Order via WhatsApp" class="p-2 rounded-xl border border-[#25D366]/50 bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-colors">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 8. Earl Grey Tea / Artisan Tea -->
+        <div class="menu-item-card group relative bg-[#FDFBF7] rounded-2xl p-5 border border-[#EADBC8]/80 hover:border-[#C68B59] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col" data-category="non-coffee">
+          <div class="relative mb-4 flex justify-center">
+            <div class="w-32 h-32 rounded-full p-1 bg-gradient-to-tr from-[#C68B59] via-[#EADBC8] to-[#2C1810] shadow-md group-hover:scale-105 transition-transform duration-300">
+              <div class="w-full h-full rounded-full overflow-hidden border-2 border-[#FAF7F2] bg-[#2C1810]">
+                <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80" alt="Earl Grey Tea / Artisan Tea" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              </div>
+            </div>
+          </div>
+          <div class="text-[11px] font-semibold uppercase tracking-wider text-[#C68B59] mb-1">Non-Kopi</div>
+          <h3 class="font-serif text-lg text-[#2C1810] font-semibold mb-1 group-hover:text-[#C68B59] transition-colors">Earl Grey Tea / Artisan Tea</h3>
+          <div class="text-base font-bold text-[#7C4F32] mb-2">Rp 22.000</div>
+          <p class="text-xs text-[#7C4F32]/80 leading-relaxed mb-4 font-light">
+            Seduhan daun teh bergamot citrus klasik premium yang harum, menyegarkan suasana santai Anda.
+          </p>
+          <div class="mt-auto pt-3 border-t border-[#EADBC8]/50 flex items-center gap-2">
+            <button onclick="addToCart('Earl Grey Tea / Artisan Tea', 22000)" class="flex-1 py-2 px-3 rounded-xl text-xs font-medium bg-[#2C1810] text-[#FAF7F2] hover:bg-[#C68B59] transition-all flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-plus text-[10px]"></i> Pesan
+            </button>
+            <a href="https://wa.me/6281999571990?text=Halo%201990%20coffeenery,%20saya%20mau%20pesan%20Earl%20Grey%20Tea" target="_blank" rel="noopener noreferrer" aria-label="Order via WhatsApp" class="p-2 rounded-xl border border-[#25D366]/50 bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-colors">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 9. Butter Croissant / Almond Croissant -->
+        <div class="menu-item-card group relative bg-[#FDFBF7] rounded-2xl p-5 border border-[#EADBC8]/80 hover:border-[#C68B59] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col" data-category="pastry">
+          <div class="relative mb-4 flex justify-center">
+            <div class="w-32 h-32 rounded-full p-1 bg-gradient-to-tr from-[#C68B59] via-[#EADBC8] to-[#2C1810] shadow-md group-hover:scale-105 transition-transform duration-300">
+              <div class="w-full h-full rounded-full overflow-hidden border-2 border-[#FAF7F2] bg-[#2C1810]">
+                <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80" alt="Butter Croissant / Almond Croissant" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              </div>
+            </div>
+          </div>
+          <div class="text-[11px] font-semibold uppercase tracking-wider text-[#C68B59] mb-1">Pastry &amp; Snack</div>
+          <h3 class="font-serif text-lg text-[#2C1810] font-semibold mb-1 group-hover:text-[#C68B59] transition-colors">Butter / Almond Croissant</h3>
+          <div class="text-base font-bold text-[#7C4F32] mb-2">Rp 24.000</div>
+          <p class="text-xs text-[#7C4F32]/80 leading-relaxed mb-4 font-light">
+            Pastry renyah berlapis khas Prancis dengan aroma French butter wangi gurih, dipanggang fresh setiap pagi.
+          </p>
+          <div class="mt-auto pt-3 border-t border-[#EADBC8]/50 flex items-center gap-2">
+            <button onclick="addToCart('Butter / Almond Croissant', 24000)" class="flex-1 py-2 px-3 rounded-xl text-xs font-medium bg-[#2C1810] text-[#FAF7F2] hover:bg-[#C68B59] transition-all flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-plus text-[10px]"></i> Pesan
+            </button>
+            <a href="https://wa.me/6281999571990?text=Halo%201990%20coffeenery,%20saya%20mau%20pesan%20Croissant" target="_blank" rel="noopener noreferrer" aria-label="Order via WhatsApp" class="p-2 rounded-xl border border-[#25D366]/50 bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-colors">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 10. French Fries / Platter -->
+        <div class="menu-item-card group relative bg-[#FDFBF7] rounded-2xl p-5 border border-[#EADBC8]/80 hover:border-[#C68B59] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col" data-category="pastry">
+          <div class="relative mb-4 flex justify-center">
+            <div class="w-32 h-32 rounded-full p-1 bg-gradient-to-tr from-[#C68B59] via-[#EADBC8] to-[#2C1810] shadow-md group-hover:scale-105 transition-transform duration-300">
+              <div class="w-full h-full rounded-full overflow-hidden border-2 border-[#FAF7F2] bg-[#2C1810]">
+                <img src="https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80" alt="French Fries / Platter" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              </div>
+            </div>
+          </div>
+          <div class="text-[11px] font-semibold uppercase tracking-wider text-[#C68B59] mb-1">Pastry &amp; Snack</div>
+          <h3 class="font-serif text-lg text-[#2C1810] font-semibold mb-1 group-hover:text-[#C68B59] transition-colors">French Fries / Platter</h3>
+          <div class="text-base font-bold text-[#7C4F32] mb-2">Rp 22.000</div>
+          <p class="text-xs text-[#7C4F32]/80 leading-relaxed mb-4 font-light">
+            Kentang goreng garing keemasan dengan taburan sea salt aromatik, disajikan dengan saus cocolan spesial.
+          </p>
+          <div class="mt-auto pt-3 border-t border-[#EADBC8]/50 flex items-center gap-2">
+            <button onclick="addToCart('French Fries / Platter', 22000)" class="flex-1 py-2 px-3 rounded-xl text-xs font-medium bg-[#2C1810] text-[#FAF7F2] hover:bg-[#C68B59] transition-all flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-plus text-[10px]"></i> Pesan
+            </button>
+            <a href="https://wa.me/6281999571990?text=Halo%201990%20coffeenery,%20saya%20mau%20pesan%20French%20Fries" target="_blank" rel="noopener noreferrer" aria-label="Order via WhatsApp" class="p-2 rounded-xl border border-[#25D366]/50 bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-colors">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 11. Cheesecake / Slice Cake -->
+        <div class="menu-item-card group relative bg-[#FDFBF7] rounded-2xl p-5 border border-[#EADBC8]/80 hover:border-[#C68B59] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col" data-category="pastry">
+          <div class="relative mb-4 flex justify-center">
+            <div class="w-32 h-32 rounded-full p-1 bg-gradient-to-tr from-[#C68B59] via-[#EADBC8] to-[#2C1810] shadow-md group-hover:scale-105 transition-transform duration-300">
+              <div class="w-full h-full rounded-full overflow-hidden border-2 border-[#FAF7F2] bg-[#2C1810]">
+                <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=600&q=80" alt="Cheesecake / Slice Cake" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              </div>
+            </div>
+          </div>
+          <div class="text-[11px] font-semibold uppercase tracking-wider text-[#C68B59] mb-1">Pastry &amp; Snack</div>
+          <h3 class="font-serif text-lg text-[#2C1810] font-semibold mb-1 group-hover:text-[#C68B59] transition-colors">Cheesecake / Slice Cake</h3>
+          <div class="text-base font-bold text-[#7C4F32] mb-2">Rp 28.000</div>
+          <p class="text-xs text-[#7C4F32]/80 leading-relaxed mb-4 font-light">
+            New York style cheesecake lembut lumer dengan dasar biskuit gurih dan glaze buah berry segar.
+          </p>
+          <div class="mt-auto pt-3 border-t border-[#EADBC8]/50 flex items-center gap-2">
+            <button onclick="addToCart('Cheesecake / Slice Cake', 28000)" class="flex-1 py-2 px-3 rounded-xl text-xs font-medium bg-[#2C1810] text-[#FAF7F2] hover:bg-[#C68B59] transition-all flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-plus text-[10px]"></i> Pesan
+            </button>
+            <a href="https://wa.me/6281999571990?text=Halo%201990%20coffeenery,%20saya%20mau%20pesan%20Cheesecake" target="_blank" rel="noopener noreferrer" aria-label="Order via WhatsApp" class="p-2 rounded-xl border border-[#25D366]/50 bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-colors">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 12. Nasi Goreng Special 1990 -->
+        <div class="menu-item-card group relative bg-[#FDFBF7] rounded-2xl p-5 border border-[#EADBC8]/80 hover:border-[#C68B59] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col" data-category="main">
+          <div class="relative mb-4 flex justify-center">
+            <div class="w-32 h-32 rounded-full p-1 bg-gradient-to-tr from-[#C68B59] via-[#EADBC8] to-[#2C1810] shadow-md group-hover:scale-105 transition-transform duration-300">
+              <div class="w-full h-full rounded-full overflow-hidden border-2 border-[#FAF7F2] bg-[#2C1810]">
+                <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=600&q=80" alt="Nasi Goreng Special 1990" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              </div>
+            </div>
+          </div>
+          <div class="text-[11px] font-semibold uppercase tracking-wider text-[#C68B59] mb-1">Makanan Berat</div>
+          <h3 class="font-serif text-lg text-[#2C1810] font-semibold mb-1 group-hover:text-[#C68B59] transition-colors">Nasi Goreng Special 1990</h3>
+          <div class="text-base font-bold text-[#7C4F32] mb-2">Rp 35.000</div>
+          <p class="text-xs text-[#7C4F32]/80 leading-relaxed mb-4 font-light">
+            Nasi goreng rempah khas 1990 disajikan lengkap dengan suwiran ayam, telur mata sapi, sate ayam, dan kerupuk.
+          </p>
+          <div class="mt-auto pt-3 border-t border-[#EADBC8]/50 flex items-center gap-2">
+            <button onclick="addToCart('Nasi Goreng Special 1990', 35000)" class="flex-1 py-2 px-3 rounded-xl text-xs font-medium bg-[#2C1810] text-[#FAF7F2] hover:bg-[#C68B59] transition-all flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-plus text-[10px]"></i> Pesan
+            </button>
+            <a href="https://wa.me/6281999571990?text=Halo%201990%20coffeenery,%20saya%20mau%20pesan%20Nasi%20Goreng%20Special%201990" target="_blank" rel="noopener noreferrer" aria-label="Order via WhatsApp" class="p-2 rounded-xl border border-[#25D366]/50 bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-colors">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 13. Ricebowl Chicken / Ricebowl Beef -->
+        <div class="menu-item-card group relative bg-[#FDFBF7] rounded-2xl p-5 border border-[#EADBC8]/80 hover:border-[#C68B59] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col" data-category="main">
+          <div class="relative mb-4 flex justify-center">
+            <div class="w-32 h-32 rounded-full p-1 bg-gradient-to-tr from-[#C68B59] via-[#EADBC8] to-[#2C1810] shadow-md group-hover:scale-105 transition-transform duration-300">
+              <div class="w-full h-full rounded-full overflow-hidden border-2 border-[#FAF7F2] bg-[#2C1810]">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Ricebowl Chicken / Ricebowl Beef" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              </div>
+            </div>
+          </div>
+          <div class="text-[11px] font-semibold uppercase tracking-wider text-[#C68B59] mb-1">Makanan Berat</div>
+          <h3 class="font-serif text-lg text-[#2C1810] font-semibold mb-1 group-hover:text-[#C68B59] transition-colors">Ricebowl Chicken / Beef</h3>
+          <div class="text-base font-bold text-[#7C4F32] mb-2">Rp 32.000</div>
+          <p class="text-xs text-[#7C4F32]/80 leading-relaxed mb-4 font-light">
+            Mangkuk nasi hangat pulen dengan topping potongan ayam renyah atau irisan daging sapi gurih saus teriyaki/lada hitam.
+          </p>
+          <div class="mt-auto pt-3 border-t border-[#EADBC8]/50 flex items-center gap-2">
+            <button onclick="addToCart('Ricebowl Chicken / Beef', 32000)" class="flex-1 py-2 px-3 rounded-xl text-xs font-medium bg-[#2C1810] text-[#FAF7F2] hover:bg-[#C68B59] transition-all flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-plus text-[10px]"></i> Pesan
+            </button>
+            <a href="https://wa.me/6281999571990?text=Halo%201990%20coffeenery,%20saya%20mau%20pesan%20Ricebowl" target="_blank" rel="noopener noreferrer" aria-label="Order via WhatsApp" class="p-2 rounded-xl border border-[#25D366]/50 bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-colors">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick Order Notice -->
+      <div class="mt-12 p-6 rounded-2xl bg-[#EADBC8]/30 border border-[#EADBC8] text-center flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3 text-left">
+          <div class="w-10 h-10 rounded-full bg-[#C68B59] text-white flex items-center justify-center shrink-0">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+          </div>
+          <div>
+            <div class="font-serif font-bold text-sm text-[#2C1810]">Ingin Reservasi Meja atau Pesan Antar?</div>
+            <div class="text-xs text-[#7C4F32]">Hubungi WhatsApp 1990 Coffeenery di +62 819-9957-1990 untuk pelayanan cepat.</div>
+          </div>
+        </div>
+        <a href="https://wa.me/6281999571990?text=Halo%201990%20coffeenery,%20saya%20ingin%20memesan%20atau%20reservasi" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white text-xs font-semibold flex items-center gap-2 shadow transition-all shrink-0">
+          <i class="fa-brands fa-whatsapp text-base"></i>
+          <span>Chat WhatsApp Sekarang</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FASILITAS SECTION -->
+  <section id="facilities" class="py-20 bg-[#F4EFE6] relative border-y border-[#EADBC8] scroll-mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#FAF7F2] text-[#7C4F32] text-xs font-semibold uppercase tracking-wider mb-3 border border-[#EADBC8]">
+          <i class="fa-solid fa-sparkles text-[#C68B59]"></i>
+          <span>Kenyamanan Pengunjung</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-[#2C1810] font-normal tracking-tight">
+          Fasilitas <span class="italic font-bold text-[#C68B59]">1990 Coffeenery</span>
+        </h2>
+        <div class="w-16 h-0.5 bg-[#C68B59] mx-auto my-4 rounded-full"></div>
+        <p class="text-base text-[#7C4F32]/80 leading-relaxed font-light">
+          Kami menyediakan berbagai sarana penunjang untuk memastikan momen berkumpul, bekerja, maupun santai Anda di Cianjur terasa maksimal dan menyenangkan.
+        </p>
+      </div>
+
+      <!-- Facilities Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- 1. Dine-in -->
+        <div class="bg-[#FAF7F2] p-7 rounded-2xl border border-[#EADBC8] hover:border-[#C68B59] transition-all duration-300 hover:shadow-lg group">
+          <div class="w-12 h-12 rounded-xl bg-[#C68B59]/15 text-[#7C4F32] flex items-center justify-center text-xl mb-4 group-hover:bg-[#C68B59] group-hover:text-white transition-colors">
+            <i class="fa-solid fa-mug-saucer"></i>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-[#2C1810] mb-2">Dine-in Area</h3>
+          <p class="text-xs sm:text-sm text-[#7C4F32]/80 leading-relaxed font-light">
+            Ruang indoor ber-AC yang sejuk, nyaman, dan estetik dengan alunan musik lo-fi yang tenang untuk menikmati secangkir kopi.
+          </p>
+        </div>
+
+        <!-- 2. Outdoor Area -->
+        <div class="bg-[#FAF7F2] p-7 rounded-2xl border border-[#EADBC8] hover:border-[#C68B59] transition-all duration-300 hover:shadow-lg group">
+          <div class="w-12 h-12 rounded-xl bg-[#C68B59]/15 text-[#7C4F32] flex items-center justify-center text-xl mb-4 group-hover:bg-[#C68B59] group-hover:text-white transition-colors">
+            <i class="fa-solid fa-tree"></i>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-[#2C1810] mb-2">Outdoor Area</h3>
+          <p class="text-xs sm:text-sm text-[#7C4F32]/80 leading-relaxed font-light">
+            Area terbuka beratap yang asri, hijau, dan sejuk di sore dan malam hari, ideal untuk ngobrol santai bersama sahabat.
+          </p>
+        </div>
+
+        <!-- 3. Wi-Fi Gratis -->
+        <div class="bg-[#FAF7F2] p-7 rounded-2xl border border-[#EADBC8] hover:border-[#C68B59] transition-all duration-300 hover:shadow-lg group">
+          <div class="w-12 h-12 rounded-xl bg-[#C68B59]/15 text-[#7C4F32] flex items-center justify-center text-xl mb-4 group-hover:bg-[#C68B59] group-hover:text-white transition-colors">
+            <i class="fa-solid fa-wifi"></i>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-[#2C1810] mb-2">Wi-Fi Gratis</h3>
+          <p class="text-xs sm:text-sm text-[#7C4F32]/80 leading-relaxed font-light">
+            Koneksi internet fiber optic berkecepatan tinggi dan stabil, sangat ramah untuk Work From Cafe (WFC), browsing, atau nugas.
+          </p>
+        </div>
+
+        <!-- 4. Stopkontak / Charging Spot -->
+        <div class="bg-[#FAF7F2] p-7 rounded-2xl border border-[#EADBC8] hover:border-[#C68B59] transition-all duration-300 hover:shadow-lg group">
+          <div class="w-12 h-12 rounded-xl bg-[#C68B59]/15 text-[#7C4F32] flex items-center justify-center text-xl mb-4 group-hover:bg-[#C68B59] group-hover:text-white transition-colors">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-[#2C1810] mb-2">Stopkontak / Charging Spot</h3>
+          <p class="text-xs sm:text-sm text-[#7C4F32]/80 leading-relaxed font-light">
+            Tersedia colokan listrik di hampir setiap meja, memudahkan Anda mengisi daya laptop dan gadget tanpa khawatir kehabisan baterai.
+          </p>
+        </div>
+
+        <!-- 5. Area Parkir -->
+        <div class="bg-[#FAF7F2] p-7 rounded-2xl border border-[#EADBC8] hover:border-[#C68B59] transition-all duration-300 hover:shadow-lg group">
+          <div class="w-12 h-12 rounded-xl bg-[#C68B59]/15 text-[#7C4F32] flex items-center justify-center text-xl mb-4 group-hover:bg-[#C68B59] group-hover:text-white transition-colors">
+            <i class="fa-solid fa-square-parking"></i>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-[#2C1810] mb-2">Area Parkir</h3>
+          <p class="text-xs sm:text-sm text-[#7C4F32]/80 leading-relaxed font-light">
+            Tempat parkir yang tertata rapi, luas, dan diawasi dengan aman untuk kendaraan roda dua maupun roda empat.
+          </p>
+        </div>
+
+        <!-- 6. Musholla -->
+        <div class="bg-[#FAF7F2] p-7 rounded-2xl border border-[#EADBC8] hover:border-[#C68B59] transition-all duration-300 hover:shadow-lg group">
+          <div class="w-12 h-12 rounded-xl bg-[#C68B59]/15 text-[#7C4F32] flex items-center justify-center text-xl mb-4 group-hover:bg-[#C68B59] group-hover:text-white transition-colors">
+            <i class="fa-solid fa-mosque"></i>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-[#2C1810] mb-2">Musholla</h3>
+          <p class="text-xs sm:text-sm text-[#7C4F32]/80 leading-relaxed font-light">
+            Sarana ibadah yang bersih, tenang, lengkap dengan tempat wudhu higienis dan perlengkapan sholat yang terawat.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. PROMOTIONAL / "WHY CHOOSE US" SECTION (SPLIT SCREEN LAYOUT) -->
+  <section id="story" class="py-20 sm:py-28 bg-[#2C1810] text-[#FAF7F2] relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Side: Brand Description -->
+        <div class="lg:col-span-6 flex flex-col justify-center pr-0 lg:pr-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FAF7F2]/10 text-[#EADBC8] text-xs font-semibold uppercase tracking-wider mb-4 w-fit border border-[#EADBC8]/20">
+            <i class="fa-solid fa-award text-[#C68B59]"></i>
+            <span>Tiga Dekade Dedikasi & Warisan Kopi</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-[#FAF7F2] font-normal tracking-tight leading-tight mb-6">
+            Mengapa Memilih <br />
+            <span class="italic font-bold text-[#D49B6A]">1990 coffeenery?</span>
+          </h2>
+
+          <p class="text-[#EADBC8]/90 text-base sm:text-lg leading-relaxed font-light mb-8">
+            Berdiri sejak tahun 1990, kami berawal dari pemanggang kopi sederhana dengan obsesi terhadap kemurnian cita rasa biji kopi terbaik. Hingga kini, barista ahli kami tetap menyangrai dalam kelompok kecil 12 kilogram untuk merayakan keunikan karakter rasa dari setiap hasil panen.
+          </p>
+
+          <!-- Core Pillars -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-[#FAF7F2]/5 border border-[#FAF7F2]/10">
+              <div class="p-2 rounded-lg bg-[#C68B59]/20 text-[#D49B6A] shrink-0">
+                <i class="fa-solid fa-leaf text-sm"></i>
+              </div>
+              <div>
+                <h4 class="font-serif text-sm font-semibold text-[#FAF7F2]">Perdagangan Beretika Langsung</h4>
+                <p class="text-xs text-[#EADBC8]/70 mt-0.5">Harga adil 100% langsung kepada para petani kopi lokal dan koperasi binaan.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-[#FAF7F2]/5 border border-[#FAF7F2]/10">
+              <div class="p-2 rounded-lg bg-[#C68B59]/20 text-[#D49B6A] shrink-0">
+                <i class="fa-solid fa-clock text-sm"></i>
+              </div>
+              <div>
+                <h4 class="font-serif text-sm font-semibold text-[#FAF7F2]">Penyangraian Segar Berkala</h4>
+                <p class="text-xs text-[#EADBC8]/70 mt-0.5">Disangrai setiap pekan demi aroma terbaik dan lapisan crema keemasan yang lembut.</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <a href="#menu" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#FAF7F2] text-[#2C1810] hover:bg-[#EADBC8] font-medium text-sm transition-all duration-200 shadow-md">
+              <span>Jelajahi Menu Kopi Kami</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Side: Feature Image & Morning Promo Box -->
+        <div class="lg:col-span-6 flex flex-col gap-6">
+          <!-- Feature Image -->
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-[#FAF7F2]/15 aspect-[16/10] group">
+            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1200&q=80" alt="Master barista pouring latte art" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1B0F0A]/85 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-5 right-5 flex justify-between items-end">
+              <div>
+                <span class="text-xs uppercase tracking-widest text-[#D49B6A] font-semibold">Racikan Spesialti</span>
+                <h3 class="font-serif text-lg sm:text-xl text-white font-medium">Single-Origin Geisha & Varietas Pilihan</h3>
+              </div>
+              <div class="bg-[#1B0F0A]/80 backdrop-blur-md px-3 py-1 rounded-full text-xs text-[#EADBC8] border border-[#FAF7F2]/20">
+                Skor Q-Grader 94 Poin
+              </div>
+            </div>
+          </div>
+
+          <!-- Promotional Box: Morning Special 20% OFF -->
+          <div class="bg-gradient-to-r from-[#FAF7F2] to-[#F5EFE6] text-[#2C1810] rounded-2xl p-6 sm:p-7 border border-[#EADBC8] shadow-xl relative overflow-hidden">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#C68B59] bg-[#C68B59]/15 px-3 py-1 rounded-full">
+                <i class="fa-solid fa-tag"></i>
+                <span>Penawaran Spesial Pagi</span>
+              </div>
+              <span class="text-xs font-semibold text-[#7C4F32] flex items-center gap-1">
+                <i class="fa-solid fa-clock text-[#C68B59]"></i> Setiap Hari 07.00 – 10.00 WIB
+              </span>
+            </div>
+
+            <div class="text-2xl sm:text-3xl font-serif font-bold text-[#2C1810] tracking-tight mb-2">
+              <span class="text-[#C68B59]">DISKON 20%</span> Semua Seduhan Pagi
+            </div>
+
+            <p class="text-xs sm:text-sm text-[#7C4F32] mb-5 leading-relaxed">
+              Awali hari Anda dengan penuh inspirasi. Pesan aneka espresso andalan, manual brew pour-over, atau cold brew antara jam 07.00 – 10.00 WIB untuk mendapatkan potongan 20%.
+            </p>
+
+            <button onclick="applyMorningDeal()" class="px-6 py-2.5 rounded-full bg-[#2C1810] hover:bg-[#C68B59] text-white font-medium text-sm transition-all duration-200 shadow flex items-center gap-2">
+              <span>Klaim Promo Pagi 20%</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. GALLERY SECTION: "VISIT US TODAY" -->
+  <section id="gallery" class="py-20 sm:py-28 bg-[#F8F4EE] relative scroll-mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EADBC8]/70 text-[#7C4F32] text-xs font-semibold uppercase tracking-wider mb-3">
+          <i class="fa-solid fa-camera-retro text-[#C68B59]"></i>
+          <span>Experience The Ambience</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-[#2C1810] font-normal tracking-tight">
+          Visit Us <span class="italic font-bold text-[#C68B59]">Today</span>
+        </h2>
+        <div class="w-16 h-0.5 bg-[#C68B59] mx-auto my-4 rounded-full"></div>
+        <p class="text-[#7C4F32]/85 text-base font-light mt-2">
+          Immerse your senses in the aroma of freshly roasted beans, handcrafted tulip latte art, and the warm hum of vinyl jazz.
+        </p>
+      </div>
+
+      <!-- Clean Card Layout Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        
+        <!-- Card 1 -->
+        <div class="group bg-[#FDFBF7] rounded-2xl overflow-hidden border border-[#EADBC8]/80 hover:border-[#C68B59] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col">
+          <div class="relative aspect-[4/3] overflow-hidden bg-[#2C1810]">
+            <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=800&q=80" alt="Latte Art" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-3 left-3 bg-[#FAF7F2]/90 backdrop-blur-md text-[#2C1810] text-[11px] font-semibold px-2.5 py-1 rounded-full border border-[#EADBC8]">
+              Latte Art
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif text-lg text-[#2C1810] font-semibold group-hover:text-[#C68B59] transition-colors mb-1">
+                Signature Rosetta & Swan
+              </h3>
+              <p class="text-xs sm:text-sm text-[#7C4F32]/80 font-light leading-relaxed">
+                Freehand tulip and swan poured with velvety microfoam.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-[#EADBC8]/50 flex items-center justify-between text-xs text-[#7C4F32]">
+              <span><i class="fa-solid fa-location-dot text-[#C68B59]"></i> Espresso Bar</span>
+              <span class="text-[#C68B59] font-medium">Daily Special</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group bg-[#FDFBF7] rounded-2xl overflow-hidden border border-[#EADBC8]/80 hover:border-[#C68B59] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col">
+          <div class="relative aspect-[4/3] overflow-hidden bg-[#2C1810]">
+            <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=800&q=80" alt="Kyoto Cold Drip" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-3 left-3 bg-[#FAF7F2]/90 backdrop-blur-md text-[#2C1810] text-[11px] font-semibold px-2.5 py-1 rounded-full border border-[#EADBC8]">
+              Brew Bar
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif text-lg text-[#2C1810] font-semibold group-hover:text-[#C68B59] transition-colors mb-1">
+                Slow Kyoto Cold Drip
+              </h3>
+              <p class="text-xs sm:text-sm text-[#7C4F32]/80 font-light leading-relaxed">
+                Drop-by-drop cold water extraction over 18 hours.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-[#EADBC8]/50 flex items-center justify-between text-xs text-[#7C4F32]">
+              <span><i class="fa-solid fa-location-dot text-[#C68B59]"></i> Kyoto Tower</span>
+              <span class="text-[#C68B59] font-medium">Single Origin</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group bg-[#FDFBF7] rounded-2xl overflow-hidden border border-[#EADBC8]/80 hover:border-[#C68B59] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col">
+          <div class="relative aspect-[4/3] overflow-hidden bg-[#2C1810]">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80" alt="Cafe Atmosphere" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-3 left-3 bg-[#FAF7F2]/90 backdrop-blur-md text-[#2C1810] text-[11px] font-semibold px-2.5 py-1 rounded-full border border-[#EADBC8]">
+              Atmosphere
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif text-lg text-[#2C1810] font-semibold group-hover:text-[#C68B59] transition-colors mb-1">
+                The Sunlit Reading Nook
+              </h3>
+              <p class="text-xs sm:text-sm text-[#7C4F32]/80 font-light leading-relaxed">
+                Warm timber tables, vintage books, and warm ambient music.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-[#EADBC8]/50 flex items-center justify-between text-xs text-[#7C4F32]">
+              <span><i class="fa-solid fa-location-dot text-[#C68B59]"></i> Reading Room</span>
+              <span class="text-[#C68B59] font-medium">Free Wi-Fi</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Atmosphere Bar Banner -->
+      <div class="mt-16 rounded-2xl bg-gradient-to-r from-[#2C1810] to-[#3D2314] text-[#FAF7F2] p-8 sm:p-12 relative overflow-hidden shadow-xl">
+        <div class="relative z-10 max-w-3xl">
+          <span class="text-xs uppercase tracking-[0.2em] font-semibold text-[#D49B6A]">
+            Diseduh Sepenuh Hati
+          </span>
+          <h3 class="font-serif text-2xl sm:text-3xl md:text-4xl font-normal mt-2 mb-4 leading-snug">
+            Setiap cangkir menyajikan kisah tentang kesabaran, dedikasi, dan cita rasa sempurna.
+          </h3>
+          <p class="text-[#EADBC8]/85 text-sm sm:text-base font-light leading-relaxed mb-6">
+            Langkahkan kaki ke kedai kami untuk menikmati irama mesin penggiling kopi, aroma harum biji kopi pilihan yang baru disangrai, dan biarkan barista kami meracik momen santai terbaik untuk hari Anda.
+          </p>
+          <div class="flex flex-wrap items-center gap-4 text-xs sm:text-sm text-[#EADBC8]">
+            <span class="flex items-center gap-1.5 bg-[#FAF7F2]/10 px-3 py-1.5 rounded-full">
+              <i class="fa-solid fa-wifi text-[#C68B59]"></i> Wi-Fi Cepat &amp; Sudut Tenang
+            </span>
+            <span class="flex items-center gap-1.5 bg-[#FAF7F2]/10 px-3 py-1.5 rounded-full">
+              <i class="fa-solid fa-sun text-[#C68B59]"></i> Area Duduk Semi-Outdoor Terbuka
+            </span>
+            <span class="flex items-center gap-1.5 bg-[#FAF7F2]/10 px-3 py-1.5 rounded-full">
+              <i class="fa-solid fa-square-parking text-[#C68B59]"></i> Area Parkir Luas
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LOKASI & KONTAK (LOCATION & CONTACT WITH GOOGLE MAPS EMBED) -->
+  <section id="location" class="py-20 sm:py-28 bg-[#FAF7F2] relative scroll-mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#EADBC8]/50 text-[#7C4F32] text-xs font-semibold uppercase tracking-wider mb-3 border border-[#C68B59]/20">
+          <i class="fa-solid fa-location-dot text-[#C68B59]"></i>
+          <span>Temukan Kami di Cianjur</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-[#2C1810] font-normal tracking-tight">
+          Kontak &amp; <span class="italic font-bold text-[#C68B59]">Lokasi Kafe</span>
+        </h2>
+        <div class="w-16 h-0.5 bg-[#C68B59] mx-auto my-4 rounded-full"></div>
+        <p class="text-base text-[#7C4F32]/80 leading-relaxed font-light">
+          Kunjungi kedai kami di jantung kota Cianjur untuk menikmati suasana ngopi yang syahdu dan hangat bersama kawan maupun keluarga.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Details & CTAs -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <!-- Alamat Lengkap Card -->
+          <div class="bg-[#FDFBF7] p-6 rounded-2xl border border-[#EADBC8] shadow-sm hover:shadow-md transition-all">
+            <div class="flex items-start gap-3.5">
+              <div class="w-11 h-11 rounded-xl bg-[#C68B59]/15 text-[#7C4F32] flex items-center justify-center text-lg shrink-0 mt-0.5">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <h3 class="font-serif text-base font-bold text-[#2C1810] mb-1">Alamat Lengkap</h3>
+                <p class="text-xs sm:text-sm text-[#7C4F32]/85 leading-relaxed font-light">
+                  Jl. K.H. Hasyim Ashari No.65, Solokpandan, Kec. Cianjur, Kabupaten Cianjur, Jawa Barat 43214.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Jam Operasional Card -->
+          <div class="bg-[#FDFBF7] p-6 rounded-2xl border border-[#EADBC8] shadow-sm hover:shadow-md transition-all">
+            <div class="flex items-start gap-3.5">
+              <div class="w-11 h-11 rounded-xl bg-[#C68B59]/15 text-[#7C4F32] flex items-center justify-center text-lg shrink-0 mt-0.5">
+                <i class="fa-regular fa-clock"></i>
+              </div>
+              <div class="w-full">
+                <h3 class="font-serif text-base font-bold text-[#2C1810] mb-1">Jam Operasional</h3>
+                <p class="text-xs sm:text-sm text-[#7C4F32]/85 font-light mb-2">
+                  Setiap Hari (Senin – Minggu)
+                </p>
+                <div class="inline-block bg-[#C68B59]/15 text-[#7C4F32] font-semibold text-xs px-3 py-1 rounded-full border border-[#C68B59]/30">
+                  Pukul 08.00 – 21.00 WIB
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Telepon / WhatsApp Card -->
+          <div class="bg-[#FDFBF7] p-6 rounded-2xl border border-[#EADBC8] shadow-sm hover:shadow-md transition-all">
+            <div class="flex items-start gap-3.5">
+              <div class="w-11 h-11 rounded-xl bg-[#25D366]/15 text-[#25D366] flex items-center justify-center text-xl shrink-0 mt-0.5">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div>
+                <h3 class="font-serif text-base font-bold text-[#2C1810] mb-1">Nomor Telepon / WhatsApp</h3>
+                <a href="https://wa.me/6281999571990?text=Halo%201990%20coffeenery,%20saya%20ingin%20memesan%20atau%20tanya%20info" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-[#2C1810] hover:text-[#25D366] transition-colors">
+                  +62 819-9957-1990
+                </a>
+                <div class="text-[11px] text-[#7C4F32]/70 mt-0.5">Layanan reservasi, pemesanan, dan pertanyaan info kafe.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Media Sosial Card -->
+          <div class="bg-[#FDFBF7] p-6 rounded-2xl border border-[#EADBC8] shadow-sm hover:shadow-md transition-all">
+            <div class="flex items-start gap-3.5">
+              <div class="w-11 h-11 rounded-xl bg-[#E1306C]/15 text-[#E1306C] flex items-center justify-center text-xl shrink-0 mt-0.5">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+              <div>
+                <h3 class="font-serif text-base font-bold text-[#2C1810] mb-1">Instagram Resmi</h3>
+                <a href="https://instagram.com/1990coffeenery" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-[#7C4F32] hover:text-[#E1306C] transition-colors">
+                  @1990coffeenery
+                </a>
+                <div class="text-[11px] text-[#7C4F32]/70 mt-0.5">Ikuti update promo, keseruan event, &amp; menu terbaru.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-3 pt-2">
+            <a 
+              href="https://www.google.com/maps/place/1990+coffeenery/@-6.8195224,107.1409222,17z" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="flex-1 py-3.5 px-6 rounded-full bg-[#2C1810] hover:bg-[#C68B59] text-white text-xs sm:text-sm font-semibold tracking-wide flex items-center justify-center gap-2 shadow-md transition-all duration-300 transform hover:-translate-y-0.5"
+            >
+              <i class="fa-solid fa-map-location-dot"></i>
+              <span>Petunjuk Arah (Maps)</span>
+            </a>
+            
+            <a 
+              href="https://wa.me/6281999571990?text=Halo%201990%20coffeenery,%20saya%20ingin%20memesan%20atau%20tanya%20info" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="flex-1 py-3.5 px-6 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white text-xs sm:text-sm font-semibold tracking-wide flex items-center justify-center gap-2 shadow-md shadow-[#25D366]/30 transition-all duration-300 transform hover:-translate-y-0.5"
+            >
+              <i class="fa-brands fa-whatsapp text-base"></i>
+              <span>Pesan via WhatsApp</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right: Interactive Google Maps Embed Iframe -->
+        <div class="lg:col-span-7">
+          <div class="bg-[#FDFBF7] p-3 sm:p-4 rounded-3xl border border-[#EADBC8] shadow-lg relative overflow-hidden">
+            <div class="flex items-center justify-between px-3 py-2 border-b border-[#EADBC8]/60 mb-3 text-xs text-[#7C4F32]">
+              <span class="font-medium flex items-center gap-2">
+                <i class="fa-solid fa-map text-[#C68B59]"></i> Peta Interaktif 1990 Coffeenery Cianjur
+              </span>
+              <a 
+                href="https://www.google.com/maps/place/1990+coffeenery/@-6.8195224,107.1409222,17z" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="text-[11px] font-bold text-[#C68B59] hover:underline flex items-center gap-1"
+              >
+                <span>Buka Layar Penuh</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+            
+            <!-- Google Maps Embed Iframe -->
+            <div class="w-full h-80 sm:h-[460px] rounded-2xl overflow-hidden shadow-inner border border-[#EADBC8]/70 relative bg-[#EADBC8]/20">
+              <iframe
+                title="Google Maps Location 1990 Coffeenery Cianjur"
+                src="https://maps.google.com/maps?q=-6.8195224,107.1409222&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="w-full h-full"
+              ></iframe>
+            </div>
+
+            <div class="p-4 mt-2 bg-[#FAF7F2] rounded-xl flex items-center justify-between text-xs text-[#7C4F32]">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-circle-info text-[#C68B59]"></i>
+                <span>Solokpandan, Kec. Cianjur (Mudah dijangkau di pusat kota)</span>
+              </div>
+              <a 
+                href="https://www.google.com/maps/place/1990+coffeenery/@-6.8195224,107.1409222,17z" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="font-semibold text-[#2C1810] hover:text-[#C68B59] transition-colors"
+              >
+                Buka Google Maps &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7. FOOTER -->
+  <footer id="contact" class="bg-[#1B0F0A] text-[#FAF7F2] pt-16 pb-12 border-t border-[#FAF7F2]/10 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-14 border-b border-[#FAF7F2]/10">
+        
+        <!-- Brand Info -->
+        <div class="lg:col-span-4">
+          <a href="#home" class="flex items-center gap-3 mb-4 inline-flex">
+            <div class="w-10 h-10 rounded-full bg-[#C68B59] text-[#1B0F0A] flex items-center justify-center font-bold">
+              <i class="fa-solid fa-mug-hot"></i>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-serif text-2xl font-bold tracking-tight text-[#FAF7F2]">
+                1990 <span class="italic font-normal">coffeenery</span>
+              </span>
+              <span class="text-[9px] uppercase tracking-[0.25em] font-semibold text-[#EADBC8] -mt-1">
+                Artisanal Roastery Cianjur
+              </span>
+            </div>
+          </a>
+          <p class="text-sm text-[#EADBC8]/80 font-light leading-relaxed mb-6 max-w-sm">
+            Menghadirkan kehangatan kopi artisanal berkualitas di Cianjur sejak 1990. Rasakan racikan espresso, manual brew, dan aneka menu lezat di kedai kami.
+          </p>
+          <!-- Social Media Links -->
+          <div class="flex items-center gap-3">
+            <a href="https://instagram.com/1990coffeenery" target="_blank" rel="noopener noreferrer" aria-label="Instagram 1990 Coffeenery" class="w-9 h-9 rounded-full bg-[#FAF7F2]/10 hover:bg-[#C68B59] text-[#FAF7F2] flex items-center justify-center transition-colors" title="@1990coffeenery">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/6281999571990" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp 1990 Coffeenery" class="w-9 h-9 rounded-full bg-[#FAF7F2]/10 hover:bg-[#25D366] text-[#FAF7F2] flex items-center justify-center transition-colors" title="+62 819-9957-1990">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://www.google.com/maps/place/1990+coffeenery/@-6.8195224,107.1409222,17z" target="_blank" rel="noopener noreferrer" aria-label="Google Maps" class="w-9 h-9 rounded-full bg-[#FAF7F2]/10 hover:bg-[#C68B59] text-[#FAF7F2] flex items-center justify-center transition-colors" title="Google Maps 1990 Coffeenery">
+              <i class="fa-solid fa-map-location-dot"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Opening Hours -->
+        <div class="lg:col-span-3">
+          <h4 class="font-serif text-lg text-[#FAF7F2] font-semibold mb-4 flex items-center gap-2">
+            <i class="fa-regular fa-clock text-[#C68B59]"></i> Jam Operasional
+          </h4>
+          <ul class="space-y-2.5 text-sm text-[#EADBC8]/85 font-light">
+            <li class="flex justify-between py-1 border-b border-[#FAF7F2]/5">
+              <span>Senin – Minggu</span>
+              <span class="font-medium text-[#C68B59]">08.00 – 21.00 WIB</span>
+            </li>
+            <li class="flex justify-between py-1 border-b border-[#FAF7F2]/5">
+              <span>Setiap Hari</span>
+              <span class="font-medium text-[#FAF7F2]">Buka Penuh</span>
+            </li>
+            <li class="flex justify-between py-1">
+              <span class="text-xs text-[#FAF7F2]/70">Dine-in &amp; Takeaway</span>
+              <span class="text-xs text-[#EADBC8]/70">Hingga 21.00 WIB</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Location -->
+        <div class="lg:col-span-3">
+          <h4 class="font-serif text-lg text-[#FAF7F2] font-semibold mb-4 flex items-center gap-2">
+            <i class="fa-solid fa-location-dot text-[#C68B59]"></i> Alamat Kafe
+          </h4>
+          <div class="space-y-3 text-sm text-[#EADBC8]/85 font-light">
+            <p class="leading-relaxed">
+              Jl. K.H. Hasyim Ashari No.65,<br />
+              Solokpandan, Kec. Cianjur,<br />
+              Kab. Cianjur, Jawa Barat 43214.
+            </p>
+            <div class="pt-2 text-xs space-y-1.5">
+              <p>
+                <i class="fa-brands fa-whatsapp text-[#25D366] mr-1.5 text-sm"></i>
+                <a href="https://wa.me/6281999571990" target="_blank" rel="noopener noreferrer" class="hover:text-white underline">+62 819-9957-1990</a>
+              </p>
+              <p>
+                <i class="fa-brands fa-instagram text-[#E1306C] mr-1.5 text-sm"></i>
+                <a href="https://instagram.com/1990coffeenery" target="_blank" rel="noopener noreferrer" class="hover:text-white underline">@1990coffeenery</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links / CTA -->
+        <div class="lg:col-span-2">
+          <h4 class="font-serif text-lg text-[#FAF7F2] font-semibold mb-3">
+            Akses Cepat
+          </h4>
+          <div class="flex flex-col gap-2 text-xs text-[#EADBC8]/80 font-light">
+            <a href="#menu" class="hover:text-[#C68B59] transition-colors py-1">&bull; Buku Menu</a>
+            <a href="#facilities" class="hover:text-[#C68B59] transition-colors py-1">&bull; Fasilitas Kafe</a>
+            <a href="#location" class="hover:text-[#C68B59] transition-colors py-1">&bull; Lokasi &amp; Peta</a>
+            <a href="https://www.google.com/maps/place/1990+coffeenery/@-6.8195224,107.1409222,17z" target="_blank" rel="noopener noreferrer" class="hover:text-[#C68B59] transition-colors py-1">&bull; Petunjuk Arah</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#EADBC8]/60 font-light">
+        <div>
+          &copy; 2026 <strong>1990 coffeenery Cianjur</strong>. All rights reserved. Savor the Perfect Brew!
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#home" class="hover:text-[#FAF7F2]">Home</a>
+          <a href="#menu" class="hover:text-[#FAF7F2]">Menu</a>
+          <a href="#location" class="hover:text-[#FAF7F2]">Lokasi</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA Button -->
+  <a
+    href="https://wa.me/6281999571990?text=Halo%201990%20coffeenery,%20saya%20ingin%20memesan%20atau%20tanya%20info"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat WhatsApp 1990 Coffeenery"
+    id="floating-whatsapp-btn"
+    class="fixed bottom-6 right-6 z-40 bg-[#25D366] hover:bg-[#20ba5a] text-white p-3.5 sm:px-4 sm:py-3 rounded-full shadow-2xl shadow-[#25D366]/40 flex items-center gap-2.5 transition-all duration-300 hover:scale-105 group border-2 border-white/40"
+  >
+    <i class="fa-brands fa-whatsapp text-lg"></i>
+    <span class="hidden sm:inline text-xs font-semibold tracking-wide">Pesan via WA</span>
+  </a>
+
+  <!-- CART SLIDE-OVER DRAWER -->
+  <div id="cart-drawer" class="hidden fixed inset-0 z-50 overflow-hidden">
+    <div onclick="toggleCart()" class="absolute inset-0 bg-[#1B0F0A]/70 backdrop-blur-sm"></div>
+    <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+      <div class="w-screen max-w-md bg-[#FAF7F2] shadow-2xl flex flex-col border-l border-[#EADBC8]">
+        <div class="p-6 border-b border-[#EADBC8] flex items-center justify-between bg-[#F5EFE6]">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-bag-shopping text-[#C68B59]"></i>
+            <h2 class="font-serif text-xl font-bold text-[#2C1810]">Your Order</h2>
+          </div>
+          <button onclick="toggleCart()" class="p-1.5 text-[#7C4F32] hover:bg-[#EADBC8] rounded-full">
+            <i class="fa-solid fa-xmark text-lg"></i>
+          </button>
+        </div>
+        <div id="cart-items-container" class="flex-1 overflow-y-auto p-6 space-y-4">
+          <!-- Populated by JS -->
+        </div>
+        <div class="p-6 border-t border-[#EADBC8] bg-[#F5EFE6] space-y-3">
+          <div class="flex justify-between text-base font-serif font-bold text-[#2C1810]">
+            <span>Estimated Total</span>
+            <span id="cart-total-amount" class="text-[#C68B59]">$4.95</span>
+          </div>
+          <button onclick="checkoutCart()" class="w-full py-3.5 rounded-full bg-[#C68B59] hover:bg-[#b87333] text-white font-medium text-sm flex items-center justify-center gap-2 shadow">
+            <span>Proceed to Pickup</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEARCH MODAL -->
+  <div id="search-modal" class="hidden fixed inset-0 z-50 overflow-y-auto p-4 sm:p-6 md:p-20 flex items-start justify-center">
+    <div onclick="toggleSearch()" class="fixed inset-0 bg-[#1B0F0A]/75 backdrop-blur-sm"></div>
+    <div class="relative bg-[#FAF7F2] rounded-2xl max-w-xl w-full border border-[#EADBC8] shadow-2xl overflow-hidden mt-12 z-10">
+      <div class="p-4 border-b border-[#EADBC8] flex items-center gap-3 bg-[#F5EFE6]">
+        <i class="fa-solid fa-magnifying-glass text-[#C68B59]"></i>
+        <input type="text" id="search-input" onkeyup="filterSearch()" placeholder="Search Espresso, Latte, Cold Brew, Caramel Macchiato..." class="w-full bg-transparent text-[#2C1810] text-sm focus:outline-none" />
+        <button onclick="toggleSearch()" class="p-1 text-[#7C4F32]">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div id="search-results" class="max-h-80 overflow-y-auto p-4 space-y-2">
+        <!-- Search items rendered here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ORDER MODAL -->
+  <div id="order-modal" class="hidden fixed inset-0 z-50 overflow-y-auto p-4 flex items-center justify-center">
+    <div onclick="closeOrderModal()" class="fixed inset-0 bg-[#1B0F0A]/80 backdrop-blur-sm"></div>
+    <div class="relative bg-[#FAF7F2] rounded-3xl max-w-lg w-full border border-[#EADBC8] shadow-2xl overflow-hidden z-10">
+      <div class="p-6 bg-[#F5EFE6] border-b border-[#EADBC8] flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-full bg-[#C68B59] text-white flex items-center justify-center">
+            <i class="fa-solid fa-mug-hot text-xs"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-[#2C1810]">Order Handcrafted Brew</h3>
+        </div>
+        <button onclick="closeOrderModal()" class="p-1.5 text-[#7C4F32]">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+      <form onsubmit="submitQuickOrder(event)" class="p-6 space-y-4 text-xs">
+        <div>
+          <label class="font-bold text-[#7C4F32] uppercase mb-1.5 block">Select Beverage</label>
+          <select id="order-drink" class="w-full p-2.5 rounded-xl border border-[#EADBC8] bg-white font-medium text-[#2C1810]">
+            <option value="Latte|$4.95">Latte ($4.95)</option>
+            <option value="Espresso|$3.75">Espresso ($3.75)</option>
+            <option value="Cold Brew|$5.25">Cold Brew ($5.25)</option>
+            <option value="Caramel Macchiato|$5.85">Caramel Macchiato ($5.85)</option>
+          </select>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="font-bold text-[#7C4F32] uppercase mb-1.5 block">Style</label>
+            <select class="w-full p-2 rounded-xl border border-[#EADBC8] bg-white text-[#2C1810]">
+              <option>Hot Brew</option>
+              <option>Iced Refresh</option>
+            </select>
+          </div>
+          <div>
+            <label class="font-bold text-[#7C4F32] uppercase mb-1.5 block">Milk</label>
+            <select class="w-full p-2 rounded-xl border border-[#EADBC8] bg-white text-[#2C1810]">
+              <option>Oat Milk</option>
+              <option>Organic Whole</option>
+              <option>Almond Milk</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="font-bold text-[#7C4F32] uppercase mb-1.5 block">Pickup Time</label>
+          <select class="w-full p-2 rounded-xl border border-[#EADBC8] bg-white text-[#2C1810]">
+            <option>Ready in 10 minutes</option>
+            <option>Ready in 20 minutes</option>
+            <option>Ready in 30 minutes</option>
+          </select>
+        </div>
+        <button type="submit" class="w-full mt-4 py-3 rounded-full bg-[#C68B59] hover:bg-[#b87333] text-white font-medium text-sm shadow">
+          Confirm Order Pickup
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-[#2C1810] text-[#FAF7F2] px-5 py-3 rounded-full shadow-2xl border border-[#C68B59]/40 text-xs sm:text-sm font-medium items-center gap-2">
+    <i class="fa-solid fa-circle-check text-[#C68B59]"></i>
+    <span id="toast-text">Order confirmed!</span>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // State
+    let cart = [
+      { name: 'Latte', price: 4.95, qty: 1 }
+    ];
+    let isVideoPlaying = true;
+    let isVideoMuted = true;
+    let hasMorningPromo = false;
+
+    // Toast
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastText = document.getElementById('toast-text');
+      toastText.innerText = msg;
+      toast.classList.remove('hidden');
+      toast.classList.add('flex');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+        toast.classList.remove('flex');
+      }, 3500);
+    }
+
+    // Cart Management
+    function addToCart(name, price) {
+      const existing = cart.find(item => item.name === name);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ name, price, qty: 1 });
+      }
+      updateCartUI();
+      showToast(`Added ${name} to your order.`);
+    }
+
+    function updateCartUI() {
+      const container = document.getElementById('cart-items-container');
+      const badge = document.getElementById('cart-badge');
+      const totalAmount = document.getElementById('cart-total-amount');
+
+      const totalCount = cart.reduce((acc, item) => acc + item.qty, 0);
+      badge.innerText = totalCount;
+
+      let rawTotal = cart.reduce((acc, item) => acc + (item.price * item.qty), 0);
+      if (hasMorningPromo) {
+        rawTotal = rawTotal * 0.8;
+      }
+
+      totalAmount.innerText = `$${rawTotal.toFixed(2)}`;
+
+      if (cart.length === 0) {
+        container.innerHTML = '<div class="text-center py-12 text-[#7C4F32]">Your order bag is empty.</div>';
+        return;
+      }
+
+      container.innerHTML = cart.map((item, idx) => `
+        <div class="p-4 rounded-xl bg-white border border-[#EADBC8] flex items-center justify-between">
+          <div>
+            <h4 class="font-serif font-bold text-sm text-[#2C1810]">${item.name}</h4>
+            <span class="text-xs text-[#C68B59] font-bold">$${(item.price * item.qty).toFixed(2)}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="changeQty(${idx}, -1)" class="w-6 h-6 rounded bg-[#FAF7F2] border border-[#EADBC8] text-xs font-bold">-</button>
+            <span class="text-xs font-semibold px-1">${item.qty}</span>
+            <button onclick="changeQty(${idx}, 1)" class="w-6 h-6 rounded bg-[#FAF7F2] border border-[#EADBC8] text-xs font-bold">+</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function changeQty(index, delta) {
+      if (cart[index]) {
+        cart[index].qty += delta;
+        if (cart[index].qty <= 0) {
+          cart.splice(index, 1);
+        }
+      }
+      updateCartUI();
+    }
+
+    function toggleCart() {
+      const drawer = document.getElementById('cart-drawer');
+      drawer.classList.toggle('hidden');
+      updateCartUI();
+    }
+
+    function checkoutCart() {
+      cart = [];
+      updateCartUI();
+      toggleCart();
+      showToast('Thank you! Your order has been placed with 1990 coffeenery.');
+    }
+
+    // Video Controls
+    function toggleVideoPlayback() {
+      const video = document.getElementById('hero-video');
+      const icon = document.getElementById('play-pause-icon');
+      if (isVideoPlaying) {
+        video.pause();
+        icon.classList.remove('fa-pause');
+        icon.classList.add('fa-play');
+        isVideoPlaying = false;
+      } else {
+        video.play();
+        icon.classList.remove('fa-play');
+        icon.classList.add('fa-pause');
+        isVideoPlaying = true;
+      }
+    }
+
+    function toggleVideoMute() {
+      const video = document.getElementById('hero-video');
+      const icon = document.getElementById('mute-icon');
+      if (isVideoMuted) {
+        video.muted = false;
+        icon.classList.remove('fa-volume-xmark');
+        icon.classList.add('fa-volume-high');
+        isVideoMuted = false;
+      } else {
+        video.muted = true;
+        icon.classList.remove('fa-volume-high');
+        icon.classList.add('fa-volume-xmark');
+        isVideoMuted = true;
+      }
+    }
+
+    let playbackRate = 1;
+    function togglePlaybackSpeed() {
+      const video = document.getElementById('hero-video');
+      const btn = document.getElementById('speed-btn');
+      playbackRate = playbackRate === 1 ? 1.5 : playbackRate === 1.5 ? 2 : 1;
+      video.playbackRate = playbackRate;
+      if (btn) btn.innerText = playbackRate + 'x';
+    }
+
+    let isFocusMode = false;
+    function toggleFocusMode() {
+      isFocusMode = !isFocusMode;
+      const content = document.getElementById('hero-content-box');
+      const icon = document.getElementById('focus-mode-icon');
+      const text = document.getElementById('focus-mode-text');
+      const hotspot = document.getElementById('coffee-hotspot');
+
+      if (isFocusMode) {
+        content.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+        icon.className = 'fa-regular fa-eye text-[#D49B6A]';
+        text.innerText = 'Tampilkan Teks';
+        if (hotspot) hotspot.classList.add('opacity-40');
+      } else {
+        content.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+        icon.className = 'fa-regular fa-eye-slash text-[#C68B59]';
+        text.innerText = 'Mode Fokus';
+        if (hotspot) hotspot.classList.remove('opacity-40');
+      }
+    }
+
+    function handleCustomVideo(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const url = URL.createObjectURL(file);
+        const video = document.getElementById('hero-video');
+        video.src = url;
+        video.load();
+        video.play().then(() => {
+          isVideoPlaying = true;
+          document.getElementById('play-pause-icon').className = 'fa-solid fa-pause';
+          showToast('Video kustom 360° berhasil dimuat!');
+        }).catch(() => {});
+      }
+    }
+
+    // Mobile Navigation
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-nav');
+      menu.classList.toggle('hidden');
+    }
+
+    // Search
+    const menuItems = [
+      { name: 'Espresso', desc: 'Double ristretto with golden crema', price: 3.75 },
+      { name: 'Latte', desc: 'Silky micro-foam with swan latte art', price: 4.95 },
+      { name: 'Cold Brew', desc: '18-hour slow steeped Colombian roast', price: 5.25 },
+      { name: 'Caramel Macchiato', desc: 'Layered vanilla, espresso and caramel', price: 5.85 },
+      { name: 'Cortado', desc: 'Equal parts warm milk and espresso', price: 4.25 },
+      { name: 'Flat White', desc: 'Double ristretto with glossy microfoam', price: 4.85 }
+    ];
+
+    function toggleSearch() {
+      const modal = document.getElementById('search-modal');
+      modal.classList.toggle('hidden');
+      if (!modal.classList.contains('hidden')) {
+        document.getElementById('search-input').focus();
+        filterSearch();
+      }
+    }
+
+    function filterSearch() {
+      const input = document.getElementById('search-input').value.toLowerCase();
+      const results = document.getElementById('search-results');
+      const filtered = menuItems.filter(i => i.name.toLowerCase().includes(input) || i.desc.toLowerCase().includes(input));
+      
+      results.innerHTML = filtered.map(item => `
+        <div class="p-3 bg-white rounded-xl border border-[#EADBC8] flex items-center justify-between">
+          <div>
+            <div class="font-serif font-bold text-sm text-[#2C1810]">${item.name}</div>
+            <div class="text-xs text-[#7C4F32]">${item.desc}</div>
+            <div class="text-xs font-bold text-[#C68B59]">$${item.price.toFixed(2)}</div>
+          </div>
+          <button onclick="addToCart('${item.name}', ${item.price}); toggleSearch();" class="px-3 py-1.5 bg-[#2C1810] text-white rounded-lg text-xs font-semibold hover:bg-[#C68B59]">
+            Add
+          </button>
+        </div>
+      `).join('');
+    }
+
+    // Order Modal
+    function openOrderModal() {
+      document.getElementById('order-modal').classList.remove('hidden');
+    }
+
+    function closeOrderModal() {
+      document.getElementById('order-modal').classList.add('hidden');
+    }
+
+    function submitQuickOrder(e) {
+      e.preventDefault();
+      const selected = document.getElementById('order-drink').value.split('|');
+      addToCart(selected[0], parseFloat(selected[1].replace('$', '')));
+      closeOrderModal();
+      showToast(`Order confirmed for ${selected[0]}! Pickup in 10 minutes.`);
+    }
+
+    // Morning Deal
+    function applyMorningDeal() {
+      hasMorningPromo = true;
+      updateCartUI();
+      toggleCart();
+      showToast('Morning Deal applied! 20% OFF will be deducted from your total.');
+    }
+
+    // Newsletter
+    function handleSubscribe(e) {
+      e.preventDefault();
+      document.getElementById('newsletter-email').value = '';
+      showToast('Welcome to the 1990 Brew Club! Check your email for your 15% voucher.');
+    }
+
+    // Navbar Scroll Background Transition
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('main-navbar');
+      if (window.scrollY > 30) {
+        navbar.classList.add('bg-[#FAF7F2]/95', 'text-[#2C1810]', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-[#EADBC8]');
+        navbar.classList.remove('bg-gradient-to-b', 'from-[#1B0F0A]/90', 'text-white');
+        document.querySelectorAll('#desktop-nav a, #search-btn, #cart-btn, #mobile-toggle').forEach(el => {
+          el.classList.remove('text-white', 'text-[#FAF7F2]/90');
+          el.classList.add('text-[#2C1810]');
+        });
+        document.querySelector('#brand-logo span').classList.remove('text-[#FAF7F2]');
+        document.querySelector('#brand-logo span').classList.add('text-[#2C1810]');
+      } else {
+        navbar.classList.remove('bg-[#FAF7F2]/95', 'text-[#2C1810]', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-[#EADBC8]');
+        navbar.classList.add('bg-gradient-to-b', 'from-[#1B0F0A]/90', 'text-white');
+        document.querySelectorAll('#desktop-nav a, #search-btn, #cart-btn, #mobile-toggle').forEach(el => {
+          el.classList.add('text-white', 'text-[#FAF7F2]/90');
+          el.classList.remove('text-[#2C1810]');
+        });
+        document.querySelector('#brand-logo span').classList.add('text-[#FAF7F2]');
+        document.querySelector('#brand-logo span').classList.remove('text-[#2C1810]');
+      }
+    });
+
+    // Menu Category Filtering
+    function filterMenuCategory(category) {
+      const tabs = document.querySelectorAll('.menu-tab-btn');
+      tabs.forEach(tab => {
+        tab.classList.remove('bg-[#2C1810]', 'text-[#FAF7F2]', 'shadow-sm', 'active');
+        tab.classList.add('bg-white', 'text-[#7C4F32]', 'border', 'border-[#EADBC8]');
+      });
+
+      const activeTab = document.getElementById('tab-' + category);
+      if (activeTab) {
+        activeTab.classList.remove('bg-white', 'text-[#7C4F32]', 'border', 'border-[#EADBC8]');
+        activeTab.classList.add('bg-[#2C1810]', 'text-[#FAF7F2]', 'shadow-sm', 'active');
+      }
+
+      const cards = document.querySelectorAll('.menu-item-card');
+      cards.forEach(card => {
+        const itemCat = card.getAttribute('data-category');
+        if (category === 'all' || itemCat === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Initial load
+    updateCartUI();
+
+    // Continuous seamless video loop
+    const heroVid = document.getElementById('hero-video');
+    if (heroVid) {
+      heroVid.muted = true;
+      heroVid.loop = true;
+      heroVid.addEventListener('ended', function() {
+        heroVid.currentTime = 0;
+        heroVid.play().catch(function() {});
+      });
+    }
+  </script>
+</body>
+</html>

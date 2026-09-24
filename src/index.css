@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --color-coffee-cream: #FAF8F5;
+  --color-coffee-beige: #F4EFEA;
+  --color-coffee-sand: #E7DFD5;
+  --color-coffee-caramel: #B87B4C;
+  --color-coffee-roast: #6E5343;
+  --color-coffee-dark: #1C130E;
+  --color-coffee-espresso: #120B07;
+}
+
+/* Background Sunlight & Turntable Animations */
+@keyframes sunbeamSweep {
+  0%, 100% {
+    transform: rotate(-18deg) translateX(-8%) translateY(0);
+    opacity: 0.25;
+  }
+  50% {
+    transform: rotate(-22deg) translateX(4%) translateY(-4%);
+    opacity: 0.45;
+  }
+}
+
+@keyframes warmPulse {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-sunbeam {
+  animation: sunbeamSweep 14s ease-in-out infinite;
+}
+
+.animate-warm-pulse {
+  animation: warmPulse 8s ease-in-out infinite;
+}
+
+/* Smooth scrolling and minimalist scrollbar */
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #D9CFC4;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B87B4C;
+}

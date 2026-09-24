@@ -1,0 +1,6 @@
+{
+  "name": "1990 coffeenery",
+  "description": "A modern, elegant, and fully responsive landing page for 1990 coffeenery with retro-modern coffee aesthetics, video hero banner, and artisanal menu highlights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
